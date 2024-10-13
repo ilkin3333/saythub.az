@@ -20,7 +20,7 @@ const about = {
     description: "Saythub komandası təcrübəli və ixtisaslaşmış üzvlərdən ibarətdir.",
     team: [
         {
-            photo: "/assets/resume/ilkininavatari.jpg",
+            photo: "/assets/resume/ilkinpp.jpeg",
             name: "İlkin Hümbətov",
             position: "CEO & Komanda Rəhbəri, Full Stack Developer ",
         },
@@ -34,6 +34,11 @@ const about = {
             photo: "/assets/resume/gulnurunavatari.jpg",
             name: "Gülnur Mirzəyeva",
             position: "Back end developer",
+        },
+        {
+            photo: "/assets/resume/cavidpp.jpg",
+            name: "Cavid Babayev",
+            position: "Motion Designer",
         }
     ]
 };
@@ -118,7 +123,7 @@ const Resume = () => {
                         <TabsContent value="experience" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl fond-bold">{experience.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0"> {experience.description}</p>
                             </div>
                         </TabsContent>
 
