@@ -1,4 +1,6 @@
 "use client";
+import { SiAdobeaftereffects, SiAdobeillustrator } from "react-icons/si";
+import { MdMotionPhotosAuto } from "react-icons/md";
 
 import {
     FaHtml5,
@@ -50,7 +52,7 @@ const experience = {
 
 const education = {
     title: "Bizim vizyonumuz",
-    description: "Biznesiniz, təşkilatınız və hətta şəxsiniz üçün Saythub komandası olaraq digital həllər, veb-saytlar, ERP sistemləri, mobil tətbiqlər, Email xidmətləri, ödəniş sistemlərinin inteqrasiyası keyfiyyətli və güvənilir xidmət təklif edir.",
+    description: "Biznesiniz, təşkilatınız və hətta şəxsiniz üçün Saythub komandası olaraq digital həllər, veb-saytlar, ERP sistemləri, mobil tətbiqlər, motion dizaynlar, ödəniş sistemlərinin inteqrasiyası keyfiyyətli və güvənilir xidmət təklif edir.",
 };
 
 const skills = {
@@ -87,7 +89,20 @@ const skills = {
         {
             icon: <SiNextdotjs />,
             name: "next.js"
+        },
+        {
+            icon: <SiAdobeaftereffects />,
+            name: "after effects"
+        },
+        {
+            icon: <SiAdobeillustrator />,
+            name: "illustrator"
+        },
+        {
+            icon: <MdMotionPhotosAuto />,
+            name: "motion design"
         }
+        
     ],
 };
 
@@ -122,7 +137,7 @@ const Resume = () => {
                         {/* Experience */}
                         <TabsContent value="experience" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl fond-bold">{experience.title}</h3>
+                                <h3 className="text-4xl font-bold" >{experience.title}</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0"> {experience.description}</p>
                             </div>
                         </TabsContent>
@@ -130,7 +145,8 @@ const Resume = () => {
                         {/* Education */}
                         <TabsContent value="education" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl fond-bold">{education.title}</h3>
+                                <h3 className="text-4xl font-bold"
+                                >{education.title}</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
                             </div>
                         </TabsContent>
@@ -138,7 +154,8 @@ const Resume = () => {
                         {/* Skills */}
                         <TabsContent value="skills" className="w-full">
     <div className="flex flex-col gap-[30px] text-center xl:text-left mb-10">  {/* mb-6 margin bottom ekledim */}
-        <h3 className="text-4xl fond-bold">{skills.title}</h3>
+        <h3 className="text-4xl font-bold"
+        >{skills.title}</h3>
     </div>
     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
         {skills.skilList.map((skill, index) => (
@@ -162,7 +179,8 @@ const Resume = () => {
                         {/* About */}
                         <TabsContent value="about" className="w-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px]">
-                                <h3 className="text-4xl fond-bold">{about.title}</h3>
+                                <h3 className="text-4xl font-bold"
+                                >{about.title}</h3>
                                 <div className="mt-10">
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
