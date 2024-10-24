@@ -10,55 +10,21 @@ const Photo = () => {
                 animate={{ opacity: 1 }} 
                 transition={{ duration: 0.4, delay: 2, ease: "easeIn" }}
             >
-                {/* Video */}
+                {/* Image */}
                 <motion.div
-    initial={{ opacity: 0 }} 
-    animate={{ opacity: 1 }} 
-    transition={{ duration: 0.4, delay: 2.4, ease: "easeIn" }}
-    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full overflow-hidden"
->
-    <video
-        src="/logovideo.mp4"
-        controls
-        autoPlay
-        loop
-        muted
-        className="object-cover w-full h-full"
-    />
-</motion.div>
-<motion.div
-    initial={{ opacity: 0 }} 
-    animate={{ opacity: 1 }} 
-    transition={{ duration: 0.4, delay: 2.4, ease: "easeIn" }}
-    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full overflow-hidden"
->
-    <video
-        src="/logovideo.mp4"
-        controls
-        autoPlay
-        loop
-        muted
-        className="object-cover w-full h-full"
-    />
-</motion.div>
-<motion.div
-    initial={{ opacity: 0 }} 
-    animate={{ opacity: 1 }} 
-    transition={{ duration: 0.4, delay: 2.4, ease: "easeIn" }}
-    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full overflow-hidden"
->
-    <video
-        src="/logovideo.mp4"
-        // controls
-        autoPlay
-        loop
-        muted
-        className="object-cover w-full h-full"
-    />
-</motion.div>
+                    initial={{ opacity: 0 }} 
+                    animate={{ opacity: 1 }} 
+                    transition={{ duration: 0.4, delay: 2.4, ease: "easeIn" }}
+                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full overflow-hidden"
+                >
+                    <img
+                        src="/saythub.logo.png" // PNG formatında resim kullanımı
+                        alt="Saythub Logo"
+                        className="object-cover w-full h-full"
+                    />
+                </motion.div>
 
-
-                {/* Circle */}
+                {/* Circle Animation */}
                 <motion.svg 
                     className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
                     fill="transparent"

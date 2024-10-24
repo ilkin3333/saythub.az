@@ -24,13 +24,13 @@ const about = {
         {
             photo: "/assets/resume/ilkinpp.jpeg",
             name: "İlkin Hümbətov",
-            position: "CEO & Komanda Rəhbəri, Full Stack Developer ",
+            position: "CEO & Full Stack Developer ",
         },
         
         {
             photo: "/assets/resume/heqiqetinavatari.jpg",
             name: "Həqiqət Ağazadə",
-            position: "Front end developer",
+            position: "Full Stack Developer",
         },
         {
             photo: "/assets/resume/gulnurunavatari.jpg",

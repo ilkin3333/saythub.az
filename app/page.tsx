@@ -1,15 +1,12 @@
 'use client'; 
 
-import { Button } from "@/components/ui/button";
-import { FiDownload } from 'react-icons/fi';
+
 import Social from "@/components/ui/Social";
 import Photo from "@/components/ui/Photo";
 import Stats from "@/components/ui/Stats";
 const Home = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/mycv.jpg";
-    link.download = "mycv.jpg";
     link.click();
   };
 

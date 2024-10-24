@@ -1,38 +1,49 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const info = [
-    {
-        icon: <FaPhoneAlt />,
-        title: "Phone",
-        description: "+994 70 380 33 33"
-    },
-    {
-        icon: <FaEnvelope />,
-        title: "Email",
-        description: "ilkin.humbetov.99@mail.ru"
-    },
-    {
-        icon: <FaMapMarkerAlt />,
-        title: "Address",
-        description: "Baku, Azerbaijan"
-    },
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    description: "+994 70 380 33 33",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "ilkin.humbetov.99@mail.ru",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
+    description: "Baku, Azerbaijan",
+  },
 ];
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xvgoowbp");
+  const [service, setService] = useState("");
 
   if (state.succeeded) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p className="text-2xl text-accent mt-[-400px]">Təşəkkür edirik! Mesajınız göndərildi.</p>
+        <p className="text-2xl text-accent mt-[-400px]">
+          Təşəkkür edirik! Mesajınız göndərildi.
+        </p>
       </div>
     );
   }
@@ -59,15 +70,39 @@ const Contact = () => {
 
               {/* Input Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" name="firstname" placeholder="Ad" />
-                <Input type="text" name="lastname" placeholder="Soyad" />
-                <Input type="email" name="email" placeholder="E-poçt adresi" />
-                <ValidationError prefix="Email" field="email" errors={state.errors} />
-                <Input type="phone" name="phone" placeholder="Telefon nömrəsi" />
+                <Input
+                  type="text"
+                  name="firstname"
+                  placeholder="Ad"
+                  required
+                />
+                <Input
+                  type="text"
+                  name="lastname"
+                  placeholder="Soyad"
+                  required
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="E-poçt adresi"
+                  required
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+                <Input
+                  type="phone"
+                  name="phone"
+                  placeholder="Telefon nömrəsi"
+                  required
+                />
               </div>
 
               {/* Select Service */}
-              <Select name="service">
+              <Select onValueChange={(value) => setService(value)} name="service">
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Xidmət seçin" />
                 </SelectTrigger>
@@ -75,20 +110,26 @@ const Contact = () => {
                   <SelectGroup>
                     <SelectItem value="web-development">Web Development</SelectItem>
                     <SelectItem value="ui-ux-design">UI/UX Design</SelectItem>
-                    <SelectItem value="logo-design">SEO</SelectItem>
+                    <SelectItem value="seo">SEO</SelectItem>
                     <SelectItem value="logo-design">Logo Design</SelectItem>
-                    <SelectItem value="logo-design">Motion Design</SelectItem>
+                    <SelectItem value="motion-design">Motion Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
+              <input type="hidden" name="service" value={service} />
 
               {/* Message */}
               <Textarea
                 name="message"
                 className="h-[200px]"
                 placeholder="Mesajınızı bura yazın"
+                required
               />
-              <ValidationError prefix="Message" field="message" errors={state.errors} />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
 
               {/* Submit Button */}
               <Button type="submit" disabled={state.submitting} className="max-w-40">

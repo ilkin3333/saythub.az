@@ -20,7 +20,7 @@ const services =[
 },
 {
     num: '03',
-    title: 'Motion Dizayn',
+    title: 'Motion Design',
     desc: 'Brendinizi təmsil edən dinamik motion dizaynlar yaradırıq. Diqqət cəlb etmək və mesajınızı daha yaddaqalan formada çatdırmaq üçün idealdır.',
     href: ""
 },
